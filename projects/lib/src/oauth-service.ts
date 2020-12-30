@@ -1428,6 +1428,10 @@ export class OAuthService extends AuthConfig implements OnDestroy {
       '&scope=' +
       encodeURIComponent(scope);
 
+    if (this.config.responseMode) {
+      url += '&response_mode=' + this.config.responseMode;
+    }
+
     if (this.responseType.includes('code') && !this.disablePKCE) {
       const [
         challenge,

@@ -82,6 +82,11 @@ export class AuthConfig {
   public responseType? = '';
 
   /**
+   * Allows to specify where parameters are appended auth request (`query` or `fragment`)
+   */
+  public responseMode? = '';
+
+  /**
    * Defines whether additional debug information should
    * be shown at the console. Note that in certain browsers
    * the verbosity of the console needs to be explicitly set
